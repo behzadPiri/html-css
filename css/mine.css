@@ -55,7 +55,13 @@ h4 {
 	font-size: 1rem;
 }
 
-@media screen and (min-width: 800px) {
+img {
+	width: 100%;
+	display: block;
+}
+
+
+@media screen and (min-width: 992px) {
 	h1 {
 		font-size: 2rem;
 	}
@@ -76,7 +82,9 @@ h4 {
 	border-radius: var(--borderRadius);
 	color: var(--clr-wight);
 	transition: var(--transition);
+	display: inline-block;
 }
+
 
 .btn:hover {
 	background: var(--clr-primery-light);
@@ -87,6 +95,14 @@ h4 {
 	content: "";
 	clear: both;
 	display: block;
+}
+
+.section-info h3 {
+	color: var(--clr-primery);
+}
+
+.section-info {
+	margin-bottom: 1rem;
 }
 
 /*
@@ -134,18 +150,19 @@ Header
 .feature {
 	text-align: center;
 	height: 18rem;
-	padding: 2.5rem 0 ;
+	padding: 2.5rem 0;
 	transition: var(--transition);
 	cursor: pointer;
 
 }
+
 .feature:hover {
 	background: var(--clr-wight);
 	box-shadow: 0 0.15rem 0 var(--clr-primery);
 }
 
 .feature:hover .feature-icon {
-	transform:translateY(-0.5rem);
+	transform: translateY(-0.5rem);
 }
 
 .feature-icon {
@@ -181,4 +198,60 @@ Header
 		float: right;
 		width: 25%;
 	}
+}
+
+.section-center {
+	padding: 4rem 0;
+	width: 85vw;
+	margin: 0 auto;
+	max-width: 1200px;
+	align-self: center;
+}
+
+.about-img {
+	padding: 2rem 0;
+	display: inline-block;
+}
+
+.wrapperAbout-pic {
+	max-width: 30rem;
+	border: 0.3rem solid var(--clr-primery);
+	border-radius: var(--borderRadius);
+	overflow: hidden;
+	background: var(--clr-primery);
+	margin: 0 auto 0 0;
+}
+
+.about-pic {
+	transition: var(--transition);
+}
+
+.wrapperAbout-pic:hover .about-pic {
+	transform: scale(1.2);
+	opacity: 0.7;
+}
+
+@media screen and (min-width: 992px) {
+	.section-center {
+		width: 95vw;
+	}
+
+	.about-img {
+		width: 50%;
+		float: left;
+	}
+
+	.about-info {
+		width: 50%;
+		float: right;
+		margin: 5rem 0;
+	}
+}
+
+.about-text {
+	color: var(--clr-gray-2);
+}
+
+.btn-about {
+	margin-top: 1.5rem;
 }
