@@ -43,7 +43,19 @@ a {
 	text-decoration: none;
 }
 
-@media screen and (min-width: 768px) {
+h1 {
+	font-size: 1.75rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+}
+
+h4 {
+	font-size: 1rem;
+}
+
+@media screen and (min-width: 800px) {
 	h1 {
 		font-size: 2rem;
 	}
@@ -51,16 +63,12 @@ a {
 	h2 {
 		font-size: 1.75rem;
 	}
-}
-@media screen and (max-width: 768px) {
-	h1 {
-		font-size: 1.5rem;
-	}
 
-	h2 {
-		font-size: 1.2rem;
+	h4 {
+		font-size: 1.25rem;
 	}
 }
+
 
 .btn {
 	background: var(--clr-primery);
@@ -75,13 +83,20 @@ a {
 	color: var(--clr-primery);
 }
 
+.clearFix::before, .clearFix::after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
 /*
 Header
 */
 
 .header {
 	height: 100vh;
-	background: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url("../assets/images/header.jpg") center/cover no-repeat fixed;
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+	url("../assets/images/header.jpg") center/cover no-repeat fixed;
 }
 
 .banner {
@@ -101,7 +116,69 @@ Header
 	color: var(--clr-wight);
 	margin-bottom: 3rem;
 }
-.btn-banner{
-	outline: 0.125rem solid var(--clr-primery)	;
+
+.btn-banner {
+	outline: 0.125rem solid var(--clr-primery);
 	outline-offset: 0.25rem;
+}
+
+.content-divider {
+	height: 0.5rem;
+	background: linear-gradient(to right, var(--clr-primery), var(--clr-primery-light), var(--clr-primery));
+}
+
+.features {
+	background: var(--clr-gray-3);
+}
+
+.feature {
+	text-align: center;
+	height: 18rem;
+	padding: 2.5rem 0 ;
+	transition: var(--transition);
+	cursor: pointer;
+
+}
+.feature:hover {
+	background: var(--clr-wight);
+	box-shadow: 0 0.15rem 0 var(--clr-primery);
+}
+
+.feature:hover .feature-icon {
+	transform:translateY(-0.5rem);
+}
+
+.feature-icon {
+	font-size: 2rem;
+	color: var(--clr-primery);
+	margin-bottom: 0.75rem;
+	display: inline-block;
+	transition: var(--transition);
+}
+
+.feature-title {
+	margin-bottom: 1rem;
+}
+
+.feature-text {
+	font-size: 1rem;
+	color: var(--clr-gray-2);
+	padding: 0 2rem;
+	text-align: center;
+	max-height: 6.5rem;
+	overflow: hidden;
+}
+
+@media screen and (min-width: 576px) {
+	.feature {
+		float: right;
+		width: 50%;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.feature {
+		float: right;
+		width: 25%;
+	}
 }
