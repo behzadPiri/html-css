@@ -109,30 +109,33 @@ img {
 navbar
 */
 
-.nav-icon{
+.nav-icon {
 	position: fixed;
 	font-size: 2rem;
-	color:var(--clr-primery);
+	color: var(--clr-primery);
 	z-index: 1;
-	top:3%;
+	top: 3%;
 	right: 3%;
 }
-.nav-icon i{
+
+.nav-icon i {
 	cursor: pointer;
 	animation: navIcon 2s infinite;
 }
-@keyframes navIcon{
-	0%{
+
+@keyframes navIcon {
+	0% {
 		font-size: 2rem;
 	}
-	50%{
+	50% {
 		font-size: 2.5rem;
 	}
-	100%{
+	100% {
 		font-size: 2rem;
 	}
 }
-.navbar{
+
+.navbar {
 	position: fixed;
 	z-index: 2;
 	background: var(--clr-gray-3);
@@ -140,40 +143,41 @@ navbar
 	width: 100%;
 	box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
 	transition: var(--transition);
-	transform:translateX(100%);
+	transform: translateX(100%);
 }
 
-.showNav{
-	transform:translateX(0);
+.showNav {
+	transform: translateX(0);
 }
 
-@media screen and (min-width: 768px){
-	.navbar{
+@media screen and (min-width: 768px) {
+	.navbar {
 		width: 30vw;
 		max-width: 30rem;
 	}
 }
 
-.navbar-header{
+.navbar-header {
 	text-align: left;
 	padding: 0.75rem;
 	font-size: 1.5rem;
 	color: #f29c9c;
 }
 
-.navbar-header i{
+.navbar-header i {
 	cursor: pointer;
 	transition: var(--transition);
 }
 
-.navbar-header i:hover{
+.navbar-header i:hover {
 	color: #bb2525;
 }
 
-.navbar-items{
+.navbar-items {
 	list-style-type: none;
 }
-.navbar-link{
+
+.navbar-link {
 	display: block;
 	padding: 0.5rem 1rem;
 	color: var(--clr-gray-2);
@@ -181,14 +185,17 @@ navbar
 	cursor: pointer;
 	transition: var(--transition);
 }
-.navbar-link i{
+
+.navbar-link i {
 	font-size: 1.4rem;
 }
-.navbar-link:hover{
+
+.navbar-link:hover {
 	background: var(--clr-primery-light);
 	border-right: 0.25rem solid var(--clr-primery);
 	color: var(--clr-primery);
 }
+
 /*
 Header
 */
@@ -210,16 +217,41 @@ Header
 .banner h1 {
 	color: var(--clr-primery);
 	margin-bottom: 1.75rem;
+	animation: sliderTop 1500ms ease ;
 }
 
 .banner h2 {
 	color: var(--clr-wight);
 	margin-bottom: 3rem;
+	animation: sliderButton 1500ms ease-in-out ;
 }
 
 .btn-banner {
 	outline: 0.125rem solid var(--clr-primery);
 	outline-offset: 0.25rem;
+	animation: sliderButton 1500ms ease-out ;
+}
+
+@keyframes sliderTop {
+	0% {
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes sliderButton {
+	0% {
+		transform: translateY(100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
 }
 
 .content-divider {
